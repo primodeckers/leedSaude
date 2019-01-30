@@ -22,6 +22,14 @@ module.exports = app => {
     app.route('/tiposPlanos/:idTipoPlano')
        .delete(app.api.tipoPlano.remove)
        .get(app.api.tipoPlano.getById)
+
+    app.route('/abrangencias')
+       .post(app.api.abrangencia.save)
+       .get(app.api.abrangencia.get)
+     
+    app.route('/abrangencias/:idAbrangencia')
+       .delete(app.api.abrangencia.remove)
+       .get(app.api.abrangencia.getById)
        
        
     app.route('/users')
